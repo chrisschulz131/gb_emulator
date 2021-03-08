@@ -172,10 +172,38 @@ int handleOP(unsigned char *opbuffer, int pc) {
         case 0x95: printf("SUB L"); break;
         case 0x96: printf("SUB (HL)"); break;
         case 0x97: printf("SUB A"); break;
-
-
-
-
+        case 0x98: printf("SBC B"); break;
+        case 0x99: printf("SBC C"); break;
+        case 0x9a printf("SBC D"); break;
+        case 0x9b: printf("SBC E"); break;
+        case 0x9c: printf("SBC H"); break;
+        case 0x9d: printf("SBC L"); break;
+        case 0x9e: printf("SBC (HL)"); break;
+        case 0x9f: printf("SBC A"); break;
+        case 0xa0: printf("AND B"); break;
+        case 0xa1: printf("AND C"); break;
+        case 0xa2: printf("AND D"); break;
+        case 0xa3: printf("AND E"); break;
+        case 0xa4: printf("AND H"); break;
+        case 0xa5: printf("AND L"); break;
+        case 0xa6: printf("AND (HL)"); break;
+        case 0xa7: printf("AND A"); break;
+        case 0xa8: printf("XOR B"); break;
+        case 0xa9: printf("XOR C"); break;
+        case 0xaa: printf("XOR D"); break;
+        case 0xab: printf("XOR E"); break;
+        case 0xac: printf("XOR H"); break;
+        case 0xad: printf("XOR L"); break;
+        case 0xae: printf("XOR (HL)"); break;
+        case 0xaf: printf("XOR A"); break;
+        case 0xb0: printf("OR B"); break;
+        case 0xb1: printf("OR C"); break;
+        case 0xb2: printf("OR D"); break;
+        case 0xb3: printf("OR E"); break;
+        case 0xb4: printf("OR H"); break;
+        case 0xb5: printf("OR L"); break;
+        case 0xb6: printf("OR (HL)"); break;
+        case 0xb7: printf("OR A"); break;
 
             // we left shift and OR to concatenate the two bytes needed for the JP instruction.
         case 0xc3: printf("JP 0x%04X", op[2] << 8 | op[1]); opbytes = 3; break;
